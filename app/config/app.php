@@ -122,6 +122,16 @@ return array(
 		'Illuminate\Remote\RemoteServiceProvider',
 
         /* Additional Providers */
+        'Way\Generators\GeneratorsServiceProvider', // Way Generators Provider
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // Laravel Ide Helper Provider
+        'Chumper\Datatable\DatatableServiceProvider', //Datatables Provider
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider', //EloquentSluggable Provider
+        'Barryvdh\DomPDF\ServiceProvider', //DomPDF Provider
+        'Greggilbert\Recaptcha\RecaptchaServiceProvider', // Recaptcha Provider
+        'Maatwebsite\Excel\ExcelServiceProvider', // Excel Provider
+        'DaveJamesMiller\Breadcrumbs\ServiceProvider', // Breadcrumbs Provider
+        'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider', // Generators Provider
+        'Orangehill\Iseed\IseedServiceProvider',
         'Zizaco\Confide\ServiceProvider', // Confide Provider
         'Zizaco\Entrust\EntrustServiceProvider', // Entrust Provider for roles
         'Barryvdh\Debugbar\ServiceProvider', // Debugger
@@ -201,6 +211,10 @@ return array(
         'Carbon'          => 'Carbon\Carbon', // Carbon
         'Datatables'      => 'yajra\Datatables\Datatables', // DataTables
         'Debugbar' 		  => 'Barryvdh\Debugbar\Facade', // Debugger
+        'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade', // DataTables
+        'Excel'           => 'Maatwebsite\Excel\Facades\Excel', // Excel
+        'PDF'             => 'Barryvdh\DomPDF\Facade', // PDF
+        'Breadcrumbs'     => 'DaveJamesMiller\Breadcrumbs\Facade', // Breadcrumbs
 
     ),
 
