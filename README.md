@@ -1,11 +1,11 @@
-#Laravel 4 Bootstrap Admin Starter Template [with Oracle DB Support]
+#Sistem Informasi PMK LP3I Makassar 2014
 
-Laravel 4 Bootstrap Admin Starter Template is a sample application for beginning development with Laravel 4.
+Aplikasi berbasis Web dengan framework Laravel 4, Bootstrap 3 Admin Template, yang dibuat untuk kepentingan PMK LP3I Makassar
 
 ## Features
 
 * Bootstrap 3.x
-* Custom Error Pages
+* Halaman Error Custom
 	* 403 for forbidden page accesses
 	* 404 for not found pages
 	* 500 for internal server errors
@@ -24,8 +24,8 @@ Laravel 4 Bootstrap Admin Starter Template is a sample application for beginning
 	* User login, registration, forgot password
 	* User account area
 	* Simple Blog functionality
-* Supports Oracle Database
-* Packages included:
+* Mendukung Oracle Database
+* Paket Including:
 	* [Confide](https://github.com/zizaco/confide)
 	* [Entrust](https://github.com/zizaco/entrust)
 	* [Laravel 4 Debugbar](https://github.com/barryvdh/laravel-debugbar)
@@ -33,12 +33,12 @@ Laravel 4 Bootstrap Admin Starter Template is a sample application for beginning
 	* [Laravel-Datatables-Oracle](https://github.com/yajra/laravel-datatables-oracle)
 
 ## Issues
-See [github issue list](https://github.com/yajra/laravel-admin-template/issues) for current list.
+Lihat [github issue list](https://github.com/hansenmakangiras/sim-pmk/issues) untuk melihat daftar issues.
 
-## Recommendations
-I recommend that you use Grunt to compile and minify your assets. See this [article](http://blog.elenakolevska.com/using-grunt-with-laravel-and-bootstrap) for details.
+## Rekomendasi
+Saya merekomendasi anda untuk menggunakan Grunt untuk mengcompile dan meminimize assets anda. Lihat ini [article](http://blog.elenakolevska.com/using-grunt-with-laravel-and-bootstrap) for details.
 
-Also I recommend using [Former](http://anahkiasen.github.io/former/) for your forms. It's an excellent library.
+Juga saya merekomendasikan menggunakan [Former](http://anahkiasen.github.io/former/) untuk penggunaan forms anda. Ini adalah library yang sangat bagus.
 
 -----
 
@@ -48,42 +48,42 @@ Also I recommend using [Former](http://anahkiasen.github.io/former/) for your fo
 	MCrypt PHP Extension
 	PHP OCI8 Extension (For Oracle Users)
 
-##How to install
-### Step 1: Get the code
-#### Option 1: Git Clone
+##Instalasi Aplikasi
+### Langkah 1: Get the code
+#### Pilihan 1: Git Clone
 
 	git clone https://github.com/yajra/laravel-admin-template.git laravel
 
-#### Option 2: Download the repository
+#### Pilihan 2: Download the repository
 
     https://github.com/yajra/laravel-admin-template/archive/master.zip
 
-### Step 2: Use Composer to install dependencies
-#### Option 1: Composer is not installed globally
+### Langkah 2: Gunakan Composer untuk menginstall dependencies
+#### Pilihan 1: Composer tidak terinstall secara global
 
     cd laravel
 	curl -s http://getcomposer.org/installer | php
 	php composer.phar install --dev
-#### Option 2: Composer is installed globally
+#### Pilihan 2: Composer telah terinstall secara global
 
     cd laravel
 	composer install --dev
 
-If you haven't already, you might want to make [composer be installed globally](http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/) for future ease of use.
+Jika belum, anda mungkin ingin membuat [composer agar terinstall secara global](http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/) untuk petunjuk penggunaan ke depan selanjutnya.
 
-Please note the use of the `--dev` flag.
+Harap dicatat penggunaan `--dev` sintaks.
 
-Some packages used to preprocess and minify assests are required on the development environment.
+Beberapa paket yang digunakan untuk preprocess dan mengecilkan assests yang diperlukan pada lingkungan pengembangan.
 
-When you deploy your project on a production environment you will want to upload the ***composer.lock*** file used on the development environment and only run `php composer.phar install` on the production server.
+Ketika Anda menggunakan proyek Anda pada lingkungan produksi Anda akan ingin meng-upload *** composer.lock *** file yang digunakan pada lingkungan pengembangan dan hanya menjalankan `php composer.phar install` pada server produksi.
 
-This will skip the development packages and ensure the version of the packages installed on the production server match those you developped on.
+Ini akan melewatkan paket pengembangan dan memastikan versi paket yang terinstal pada server produksi sudah sesuai dengan yang akan Anda kembangkan nantinya.
 
-NEVER run `php composer.phar update` on your production server.
+JANGAN PERNAH menjalankan `php composer.phar update` saat anda berada pada lingkungan Production.
 
-### Step 3: Configure Environments
+### Step 3: Mengatur Environments
 
-Open ***bootstrap/start.php*** and edit the following lines to match your settings. You want to be using your machine name in Windows and your hostname in OS X and Linux (type `hostname` in terminal). Using the machine name will allow the `php artisan` command to use the right configuration files as well.
+Buka ***bootstrap/start.php*** dan ubah beberapa baris berikut sesuaikan dengan pengaturan anda. Anda dapat menggunakan nama komputer anda di Windows dan hostname Anda di OS X dan Linux (ketik `hostname` di terminal). Menggunakan nama mesin akan memungkinkan perintah `php artisan` untuk menggunakan file-file konfigurasi yang tepat juga.
 
     $env = $app->detectEnvironment(array(
 
@@ -93,9 +93,9 @@ Open ***bootstrap/start.php*** and edit the following lines to match your settin
 
     ));
 
-Now create the folder inside ***app/config*** that corresponds to the environment the code is deployed in. This will most likely be ***local*** when you first start a project.
+Sekarang buatlah folder di dalam *** app / config *** yang sesuai dengan lingkungan pengembangan kode yang anda gunakan. Biasanya ini menjadi *** *** lokal ketika Anda pertama kali memulai sebuah proyek.
 
-You will now be copying the initial configuration file inside this folder before editing it. Let's start with ***app/config/app.php***. So ***app/config/local/app.php*** will probably look something like this, as the rest of the configuration can be left to their defaults from the initial config file:
+Sekarang Anda akan menyalin file konfigurasi awal dalam folder ini sebelum mengeditnya. Mari kita mulai dengan *** app/config/app.php ***. Jadi *** app/config/local/app.php *** mungkin akan terlihat seperti ini, sebagai sisa konfigurasi dapat dibiarkan default dari file konfigurasi awal:
 
     <?php
 
@@ -117,23 +117,23 @@ You will now be copying the initial configuration file inside this folder before
 
     );
 
-### Step 4: Configure Database
+### Langkah 4: Pengaturan Database
 
-Now that you have the environment configured, you need to create a database configuration for it. Copy the file ***app/config/database.php*** in ***app/config/local*** and edit it to match your local database settings. You can remove all the parts that you have not changed as this configuration file will be loaded over the initial one.
+Sekarang Anda memiliki lingkungan pengembangan yang sudah dikonfigurasi, Anda perlu membuat konfigurasi database untuk itu. Salin file *** app / config / database.php *** *** di app / config / local *** dan mengeditnya agar sesuai dengan pengaturan database lokal Anda. Anda dapat menghapus semua bagian yang tidak berubah sebagai file konfigurasi ini akan dimuat setelah di inisialisasi.
 
-### Step 5: Configure Mailer
+### Langkah 5: Mengatur Mailer
 
-In the same fashion, copy the ***app/config/mail.php*** configuration file in ***app/config/local/mail.php***. Now set the `address` and `name` from the `from` array in ***config/mail.php***. Those will be used to send account confirmation and password reset emails to the users.
-If you don't set that registration will fail because it cannot send the confirmation email.
+Dalam cara yang sama, salin *** app / config / mail.php *** file konfigurasi di *** app / config / local / mail.php ***. Sekarang mengatur `address` dan` name` dari `array yang dari` di *** config / mail.php ***. Mereka akan digunakan untuk mengirim konfirmasi account dan password reset email ke pengguna.
+Jika Anda tidak menetapkan konfigurasi akan gagal karena tidak bisa mengirim email konfirmasi.
 
-### Step 6: Populate Database
-Run these commands to create and populate Users table:
+### Langkah 6: Populasi Database
+Jalankan perintah ini untuk membuat dan mengisi tabel Pengguna:
 
 	php artisan migrate
 	php artisan db:seed
 
-### Step 7: Set Encryption Key
-***In app/config/app.php***
+### Langkah 7: Set Encryption Key
+***Dalam app/config/app.php***
 
 ```
 /*
@@ -154,69 +154,69 @@ You can use artisan to do this
 
     php artisan key:generate --env=local
 
-The `--env` option allows defining which environment you would like to apply the key generation. In our case, artisan generates your key in ***app/config/local/app.php*** and leaves ***'YourSecretKey!!!'*** in ***app/config/app.php***. Now it can be generated again when you move the project to another environment.
+Opsi `--env` memungkinkan mendefinisikan lingkungan yang Anda ingin menerapkan pembuatan kunci. Dalam kasus kami, tukang menghasilkan kunci Anda di *** app / config / local / app.php *** dan daun *** 'YourSecretKey !!! "*** *** di app / config / app.php * **. Sekarang dapat dihasilkan lagi ketika Anda memindahkan proyek ke lingkungan lain.
 
-### Step 8: Make sure app/storage is writable by your web server.
+### Langkah 8: Pastikan app/storage dapat diakses oleh server web Anda.
 
-If permissions are set correctly:
+Jika pengaksesan diatur dengan benar:
 
     chmod -R 775 app/storage
 
-Should work, if not try
+Harusnya dapat bekerja, jika tidak, cobalah :
 
     chmod -R 777 app/storage
 
-### Step 9: Start Page (Three options for proceeding)
+### Langkah 9: Halaman Awal (3 Opsi untuk melanjutkan)
 
-### User login with commenting permission
-Navigate to your Laravel 4 website and login at /user/login:
+### User login dengan izin komentar
+Arahkan ke root situs project Anda dan login di / user / login:
 
     username : user
     password : user
 
-## Create a new user
-Create a new user at /user/create
+## Membuat Pengguna Baru
+Untuk membuat pengguna baru arahkan ke /user/create
 
 ### Admin login
-Navigate to /admin
+Arahkan ke: /admin
 
     username: admin
     password: admin
 
 -----
-## Application Structure
+## Struktur Aplikasi
 
-The structure of this starter site is the same as default Laravel 4 with one exception.
-This starter site adds a `library` folder. Which, houses application specific library files.
-The files within library could also be handled within a composer package, but is included here as an example.
+Struktur aplikasi ini adalah sama sebagai default Laravel 4 dengan satu pengecualian.
+Pada Aplikasi ini menambahkan `folder library`. Yang, menjadi rumah dari file library tertentu.
+File-file dalam library juga bisa ditangani dalam paket komposer, tetapi dimasukkan di sini sebagai contoh.
 
-## Detect Language
+## Deteksi Bahasa
 
-If you want to detect teh language on all pages you'll want to add the following to your routes.php at the top.
+Jika Anda ingin mendeteksi bahasa pada semua halaman Anda akan ingin menambahkan berikut ke routes.php Anda di atas.
 
     Route::when('*','detectLang');
 
 
 ### Development
 
-For ease of development you'll want to enable a couple useful packages. This requires editing the `app/config/app.php` file.
+Untuk memudahkan pengembangan Anda akan ingin mengaktifkan beberapa paket yang berguna. Hal ini memerlukan mengedit `app / config / berkas app.php`.
 
 ```
     'providers' => array(
 
         [...]
 
-        /* Uncomment for use in development */
+        /* Uncomment untuk digunakan dalam pengembangan */
 		// 'Barryvdh\Debugbar\ServiceProvider',
     ),
 ```
-Uncomment the Generators and IDE Helpers. Then you'll want to run a composer update with the dev flag.
+Uncomment Generator dan Pembantu IDE. Kemudian Anda akan ingin menjalankan update komposer dengan flag dev.
 
 ```
 php composer.phar update
 ```
-This adds the generators and ide helpers.
-To make it build the ide helpers automatically you'll want to modify the post-update-cmd in `composer.json`
+Ini menambahkan generator dan pembantu ide.
+Untuk membuatnya membangun pembantu ide otomatis Anda akan ingin memodifikasi pasca-update-cmd di `composer.json`
 
 ```
 		"post-update-cmd": [
@@ -225,10 +225,9 @@ To make it build the ide helpers automatically you'll want to modify the post-up
 		]
 ```
 
-### Production Launch
+### Peluncuran Produksi
 
-By default debugging is enabled. Before you go to production you should disable debugging in `app/config/app.php`
-
+Dengan debugging default diaktifkan. Sebelum Anda pergi ke produksi Anda harus menonaktifkan debugging di `app / config / app.php`
 ```
     /*
     |--------------------------------------------------------------------------
@@ -244,11 +243,11 @@ By default debugging is enabled. Before you go to production you should disable 
     'debug' => false,
 ```
 
-## Troubleshooting
+## Pemecahan Masalah
 
-## Composer asking for login / password
+## Composer meminta login / password
 
-Try using this with doing the install instead.
+Coba gunakan ini dengan melakukan instal sebaliknya.
 
     composer install --dev --prefer-source --no-interaction
 
@@ -256,8 +255,10 @@ Try using this with doing the install instead.
 
 This is free software distributed under the terms of the MIT license
 
-## Additional information
+## Informasi Tambahan
 
-Inspired by and based on [Laravel-4-Bootstrap-Starter-Site](https://github.com/andrewelkins/Laravel-4-Bootstrap-Starter-Site)
+Terinspirasi oleh dan berdasarkan [Laravel-4-Bootstrap-Starter-Site] (https://github.com/andrewelkins/Laravel-4-Bootstrap-Starter-Site)
 
-Any questions, feel free to [contact me](mailto:aqangeles@gmail.com).
+Terinspirasi oleh dan berdasarkan [Laravel-4-Admin-Template] (https://github.com/yajra/laravel-admin-template)
+
+Setiap pertanyaan, jangan ragu untuk [menghubungi saya] (mailto: hansenmakangiras@gmail.com).
