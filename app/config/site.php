@@ -7,6 +7,6 @@ return array(
 	 */
 
 	// Site Name
-	'name' => 'Laravel Admin Template',
+	'name' => 'PMK LP3I Makassar',
 
 	);

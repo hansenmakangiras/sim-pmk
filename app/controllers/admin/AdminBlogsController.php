@@ -12,6 +12,7 @@ class AdminBlogsController extends AdminController {
     /**
      * Inject the models.
      * @param Post $post
+     *
      */
     public function __construct(Post $post)
     {
