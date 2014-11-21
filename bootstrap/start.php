@@ -26,9 +26,9 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('yajra-mac.local'), // Change this to your local machine hostname.
-    'staging' => array('your-staging-machine-name'),
-    'production' => array('your-production-machine-name'),
+    'local' => array('hansenkibow-pc.local'), // Change this to your local machine hostname.
+    'staging' => array('hansenkibow-pc.staging'),
+    'production' => array('hansenkibow-pc.production'),
 
 ));
 
