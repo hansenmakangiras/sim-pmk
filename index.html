@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>SIM - PMK by hansenmakangiras</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>SIM - PMK</h1>
+        <h2>Sistem Informasi Manajemen PMK LP3I Makassar 2014 Berbasis Laravel Framework</h2>
+        <a href="https://github.com/hansenmakangiras/sim-pmk" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="sistem-informasi-pmk-lp3i-makassar-2014" class="anchor" href="#sistem-informasi-pmk-lp3i-makassar-2014" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sistem Informasi PMK LP3I Makassar 2014</h1>
+
+<p>Aplikasi berbasis Web dengan framework Laravel 4, Bootstrap 3 Admin Template, yang dibuat untuk kepentingan PMK LP3I Makassar</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Bootstrap 3.x</li>
+<li>Halaman Error Custom
+
+<ul>
+<li>403 for forbidden page accesses</li>
+<li>404 for not found pages</li>
+<li>500 for internal server errors</li>
+</ul>
+</li>
+<li>Confide for Authentication and Authorization</li>
+<li>Back-end
+
+<ul>
+<li>Admin Template using <a href="https://github.com/almasaeed2010/AdminLTE">adminLTE</a>
+</li>
+<li>User and Role management</li>
+<li>Manage blog posts and comments</li>
+<li>
+<a href="https://github.com/xing/wysihtml5">WYSIWYG</a> editor for post creation and editing.</li>
+<li>
+<a href="https://github.com/DataTables/DataTables">DataTables</a> dynamic table sorting and filtering.</li>
+<li>
+<a href="https://github.com/jackmoore/colorbox">Colorbox</a> Lightbox jQuery modal popup.</li>
+<li>
+<a href="https://github.com/ivaynberg/select2">Select 2</a> jQuery-based replacement for select boxes</li>
+<li><a href="http://www.eyecon.ro/bootstrap-datepicker">Bootstrap Datepicker</a></li>
+</ul>
+</li>
+<li>Front-end
+
+<ul>
+<li>
+<a href="https://github.com/flathemes/bootflat">Bootflat</a> Flat UI KIT Template</li>
+<li>User login, registration, forgot password</li>
+<li>User account area</li>
+<li>Simple Blog functionality</li>
+</ul>
+</li>
+<li>Mendukung Oracle Database</li>
+<li>Paket Including:
+
+<ul>
+<li><a href="https://github.com/zizaco/confide">Confide</a></li>
+<li><a href="https://github.com/zizaco/entrust">Entrust</a></li>
+<li><a href="https://github.com/barryvdh/laravel-debugbar">Laravel 4 Debugbar</a></li>
+<li><a href="https://github.com/yajra/laravel-oci8">Laravel-OCI8</a></li>
+<li><a href="https://github.com/yajra/laravel-datatables-oracle">Laravel-Datatables-Oracle</a></li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>Lihat <a href="https://github.com/hansenmakangiras/sim-pmk/issues">github issue list</a> untuk melihat daftar issues.</p>
+
+<h2>
+<a id="rekomendasi" class="anchor" href="#rekomendasi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rekomendasi</h2>
+
+<p>Saya merekomendasi anda untuk menggunakan Grunt untuk mengcompile dan meminimize assets anda. Lihat ini <a href="http://blog.elenakolevska.com/using-grunt-with-laravel-and-bootstrap">article</a> for details.</p>
+
+<p>Juga saya merekomendasikan menggunakan <a href="http://anahkiasen.github.io/former/">Former</a> untuk penggunaan forms anda. Ini adalah library yang sangat bagus.</p>
+
+<hr>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<pre><code>PHP &gt;= 5.4.0
+MCrypt PHP Extension
+PHP OCI8 Extension (For Oracle Users)
+</code></pre>
+
+<h2>
+<a id="instalasi-aplikasi" class="anchor" href="#instalasi-aplikasi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalasi Aplikasi</h2>
+
+<h3>
+<a id="langkah-1-get-the-code" class="anchor" href="#langkah-1-get-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 1: Get the code</h3>
+
+<h4>
+<a id="pilihan-1-git-clone" class="anchor" href="#pilihan-1-git-clone" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pilihan 1: Git Clone</h4>
+
+<pre><code>git clone https://github.com/yajra/laravel-admin-template.git laravel
+</code></pre>
+
+<h4>
+<a id="pilihan-2-download-the-repository" class="anchor" href="#pilihan-2-download-the-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pilihan 2: Download the repository</h4>
+
+<pre><code>https://github.com/yajra/laravel-admin-template/archive/master.zip
+</code></pre>
+
+<h3>
+<a id="langkah-2-gunakan-composer-untuk-menginstall-dependencies" class="anchor" href="#langkah-2-gunakan-composer-untuk-menginstall-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 2: Gunakan Composer untuk menginstall dependencies</h3>
+
+<h4>
+<a id="pilihan-1-composer-tidak-terinstall-secara-global" class="anchor" href="#pilihan-1-composer-tidak-terinstall-secara-global" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pilihan 1: Composer tidak terinstall secara global</h4>
+
+<pre><code>cd laravel
+curl -s http://getcomposer.org/installer | php
+php composer.phar install --dev
+</code></pre>
+
+<h4>
+<a id="pilihan-2-composer-telah-terinstall-secara-global" class="anchor" href="#pilihan-2-composer-telah-terinstall-secara-global" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pilihan 2: Composer telah terinstall secara global</h4>
+
+<pre><code>cd laravel
+composer install --dev
+</code></pre>
+
+<p>Jika belum, anda mungkin ingin membuat <a href="http://andrewelkins.com/programming/php/setting-up-composer-globally-for-laravel-4/">composer agar terinstall secara global</a> untuk petunjuk penggunaan ke depan selanjutnya.</p>
+
+<p>Harap dicatat penggunaan <code>--dev</code> sintaks.</p>
+
+<p>Beberapa paket yang digunakan untuk preprocess dan mengecilkan assests yang diperlukan pada lingkungan pengembangan.</p>
+
+<p>Ketika Anda menggunakan proyek Anda pada lingkungan produksi Anda akan ingin meng-upload *** composer.lock *** file yang digunakan pada lingkungan pengembangan dan hanya menjalankan <code>php composer.phar install</code> pada server produksi.</p>
+
+<p>Ini akan melewatkan paket pengembangan dan memastikan versi paket yang terinstal pada server produksi sudah sesuai dengan yang akan Anda kembangkan nantinya.</p>
+
+<p>JANGAN PERNAH menjalankan <code>php composer.phar update</code> saat anda berada pada lingkungan Production.</p>
+
+<h3>
+<a id="step-3-mengatur-environments" class="anchor" href="#step-3-mengatur-environments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Mengatur Environments</h3>
+
+<p>Buka <strong><em>bootstrap/start.php</em></strong> dan ubah beberapa baris berikut sesuaikan dengan pengaturan anda. Anda dapat menggunakan nama komputer anda di Windows dan hostname Anda di OS X dan Linux (ketik <code>hostname</code> di terminal). Menggunakan nama mesin akan memungkinkan perintah <code>php artisan</code> untuk menggunakan file-file konfigurasi yang tepat juga.</p>
+
+<pre><code>$env = $app-&gt;detectEnvironment(array(
+
+    'local' =&gt; array('your-local-machine-name'),
+    'staging' =&gt; array('your-staging-machine-name'),
+    'production' =&gt; array('your-production-machine-name'),
+
+));
+</code></pre>
+
+<p>Sekarang buatlah folder di dalam *** app / config *** yang sesuai dengan lingkungan pengembangan kode yang anda gunakan. Biasanya ini menjadi *** *** lokal ketika Anda pertama kali memulai sebuah proyek.</p>
+
+<p>Sekarang Anda akan menyalin file konfigurasi awal dalam folder ini sebelum mengeditnya. Mari kita mulai dengan *** app/config/app.php <em>**. Jadi **</em> app/config/local/app.php *** mungkin akan terlihat seperti ini, sebagai sisa konfigurasi dapat dibiarkan default dari file konfigurasi awal:</p>
+
+<pre><code>&lt;?php
+
+return array(
+
+    'url' =&gt; 'http://myproject.local',
+
+    'timezone' =&gt; 'UTC',
+
+    'key' =&gt; 'YourSecretKey!!!',
+
+    'providers' =&gt; array(
+
+    [... Removed ...]
+
+    /* Uncomment for use in development */
+    //'Barryvdh\Debugbar\ServiceProvider', // Debugger
+    ),
+
+);
+</code></pre>
+
+<h3>
+<a id="langkah-4-pengaturan-database" class="anchor" href="#langkah-4-pengaturan-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 4: Pengaturan Database</h3>
+
+<p>Sekarang Anda memiliki lingkungan pengembangan yang sudah dikonfigurasi, Anda perlu membuat konfigurasi database untuk itu. Salin file *** app / config / database.php *** *** di app / config / local *** dan mengeditnya agar sesuai dengan pengaturan database lokal Anda. Anda dapat menghapus semua bagian yang tidak berubah sebagai file konfigurasi ini akan dimuat setelah di inisialisasi.</p>
+
+<h3>
+<a id="langkah-5-mengatur-mailer" class="anchor" href="#langkah-5-mengatur-mailer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 5: Mengatur Mailer</h3>
+
+<p>Dalam cara yang sama, salin *** app / config / mail.php *** file konfigurasi di *** app / config / local / mail.php <em>**. Sekarang mengatur <code>address</code> dan<code>name</code> dari <code>array yang dari</code> di **</em> config / mail.php ***. Mereka akan digunakan untuk mengirim konfirmasi account dan password reset email ke pengguna.
+Jika Anda tidak menetapkan konfigurasi akan gagal karena tidak bisa mengirim email konfirmasi.</p>
+
+<h3>
+<a id="langkah-6-populasi-database" class="anchor" href="#langkah-6-populasi-database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 6: Populasi Database</h3>
+
+<p>Jalankan perintah ini untuk membuat dan mengisi tabel Pengguna:</p>
+
+<pre><code>php artisan migrate
+php artisan db:seed
+</code></pre>
+
+<h3>
+<a id="langkah-7-set-encryption-key" class="anchor" href="#langkah-7-set-encryption-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 7: Set Encryption Key</h3>
+
+<p><strong><em>Dalam app/config/app.php</em></strong></p>
+
+<pre><code>/*
+|--------------------------------------------------------------------------
+| Encryption Key
+|--------------------------------------------------------------------------
+|
+| This key is used by the Illuminate encrypter service and should be set
+| to a random, long string, otherwise these encrypted values will not
+| be safe. Make sure to change it before deploying any application!
+|
+*/
+</code></pre>
+
+<pre><code>'key' =&gt; 'YourSecretKey!!!',
+</code></pre>
+
+<p>You can use artisan to do this</p>
+
+<pre><code>php artisan key:generate --env=local
+</code></pre>
+
+<p>Opsi <code>--env</code> memungkinkan mendefinisikan lingkungan yang Anda ingin menerapkan pembuatan kunci. Dalam kasus kami, tukang menghasilkan kunci Anda di *** app / config / local / app.php *** dan daun *** 'YourSecretKey !!! "*** *** di app / config / app.php * **. Sekarang dapat dihasilkan lagi ketika Anda memindahkan proyek ke lingkungan lain.</p>
+
+<h3>
+<a id="langkah-8-pastikan-appstorage-dapat-diakses-oleh-server-web-anda" class="anchor" href="#langkah-8-pastikan-appstorage-dapat-diakses-oleh-server-web-anda" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 8: Pastikan app/storage dapat diakses oleh server web Anda.</h3>
+
+<p>Jika pengaksesan diatur dengan benar:</p>
+
+<pre><code>chmod -R 775 app/storage
+</code></pre>
+
+<p>Harusnya dapat bekerja, jika tidak, cobalah :</p>
+
+<pre><code>chmod -R 777 app/storage
+</code></pre>
+
+<h3>
+<a id="langkah-9-halaman-awal-3-opsi-untuk-melanjutkan" class="anchor" href="#langkah-9-halaman-awal-3-opsi-untuk-melanjutkan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Langkah 9: Halaman Awal (3 Opsi untuk melanjutkan)</h3>
+
+<h3>
+<a id="user-login-dengan-izin-komentar" class="anchor" href="#user-login-dengan-izin-komentar" aria-hidden="true"><span class="octicon octicon-link"></span></a>User login dengan izin komentar</h3>
+
+<p>Arahkan ke root situs project Anda dan login di / user / login:</p>
+
+<pre><code>username : user
+password : user
+</code></pre>
+
+<h2>
+<a id="membuat-pengguna-baru" class="anchor" href="#membuat-pengguna-baru" aria-hidden="true"><span class="octicon octicon-link"></span></a>Membuat Pengguna Baru</h2>
+
+<p>Untuk membuat pengguna baru arahkan ke /user/create</p>
+
+<h3>
+<a id="admin-login" class="anchor" href="#admin-login" aria-hidden="true"><span class="octicon octicon-link"></span></a>Admin login</h3>
+
+<p>Arahkan ke: /admin</p>
+
+<pre><code>username: admin
+password: admin
+</code></pre>
+
+<hr>
+
+<h2>
+<a id="struktur-aplikasi" class="anchor" href="#struktur-aplikasi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Struktur Aplikasi</h2>
+
+<p>Struktur aplikasi ini adalah sama sebagai default Laravel 4 dengan satu pengecualian.
+Pada Aplikasi ini menambahkan <code>folder library</code>. Yang, menjadi rumah dari file library tertentu.
+File-file dalam library juga bisa ditangani dalam paket komposer, tetapi dimasukkan di sini sebagai contoh.</p>
+
+<h2>
+<a id="deteksi-bahasa" class="anchor" href="#deteksi-bahasa" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deteksi Bahasa</h2>
+
+<p>Jika Anda ingin mendeteksi bahasa pada semua halaman Anda akan ingin menambahkan berikut ke routes.php Anda di atas.</p>
+
+<pre><code>Route::when('*','detectLang');
+</code></pre>
+
+<h3>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h3>
+
+<p>Untuk memudahkan pengembangan Anda akan ingin mengaktifkan beberapa paket yang berguna. Hal ini memerlukan mengedit <code>app / config / berkas app.php</code>.</p>
+
+<pre><code>    'providers' =&gt; array(
+
+        [...]
+
+        /* Uncomment untuk digunakan dalam pengembangan */
+        // 'Barryvdh\Debugbar\ServiceProvider',
+    ),
+</code></pre>
+
+<p>Uncomment Generator dan Pembantu IDE. Kemudian Anda akan ingin menjalankan update komposer dengan flag dev.</p>
+
+<pre><code>php composer.phar update
+</code></pre>
+
+<p>Ini menambahkan generator dan pembantu ide.
+Untuk membuatnya membangun pembantu ide otomatis Anda akan ingin memodifikasi pasca-update-cmd di <code>composer.json</code></p>
+
+<pre><code>        "post-update-cmd": [
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
+        ]
+</code></pre>
+
+<h3>
+<a id="peluncuran-produksi" class="anchor" href="#peluncuran-produksi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Peluncuran Produksi</h3>
+
+<p>Dengan debugging default diaktifkan. Sebelum Anda pergi ke produksi Anda harus menonaktifkan debugging di <code>app / config / app.php</code></p>
+
+<pre><code>    /*
+    |--------------------------------------------------------------------------
+    | Application Debug Mode
+    |--------------------------------------------------------------------------
+    |
+    | When your application is in debug mode, detailed error messages with
+    | stack traces will be shown on every error that occurs within your
+    | application. If disabled, a simple generic error page is shown.
+    |
+    */
+
+    'debug' =&gt; false,
+</code></pre>
+
+<h2>
+<a id="pemecahan-masalah" class="anchor" href="#pemecahan-masalah" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pemecahan Masalah</h2>
+
+<h2>
+<a id="composer-meminta-login--password" class="anchor" href="#composer-meminta-login--password" aria-hidden="true"><span class="octicon octicon-link"></span></a>Composer meminta login / password</h2>
+
+<p>Coba gunakan ini dengan melakukan instal sebaliknya.</p>
+
+<pre><code>composer install --dev --prefer-source --no-interaction
+</code></pre>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This is free software distributed under the terms of the MIT license</p>
+
+<h2>
+<a id="informasi-tambahan" class="anchor" href="#informasi-tambahan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Informasi Tambahan</h2>
+
+<p>Terinspirasi oleh dan berdasarkan <a href="https://github.com/andrewelkins/Laravel-4-Bootstrap-Starter-Site">Laravel-4-Bootstrap-Starter-Site</a></p>
+
+<p>Terinspirasi oleh dan berdasarkan <a href="https://github.com/yajra/laravel-admin-template">Laravel-4-Admin-Template</a></p>
+
+<p>Setiap pertanyaan, jangan ragu untuk <a href="mailto:%20hansenmakangiras@gmail.com">menghubungi saya</a>.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/hansenmakangiras/sim-pmk/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/hansenmakangiras/sim-pmk/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/hansenmakangiras/sim-pmk"></a> is maintained by <a href="https://github.com/hansenmakangiras">hansenmakangiras</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
