@@ -37,6 +37,71 @@ class AdminCategoriesController extends AdminController
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function getCreate()
+    {
+        // Title
+        $title = Lang::get('admin/categories/title.create_a_new_category');
+
+        // Show the page
+        return View::make('admin/categories/create_edit', compact('title'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function postCreate()
+    {
+        // Declare the rules for the form validation
+        $rules = array(
+            'category' => 'required|min:3'
+        );
+
+        // Validate the inputs
+        $validator = Validator::make(Input::all(), $rules);
+
+        // Check if the form validates with success
+        if ($validator->passes())
+        {
+            // Create a new blog post
+            $user = Auth::user();
+
+            // Update the blog post data
+            $this->post->category          = Input::get('category');
+            $this->post->user_id          = $user->id;
+
+            // Was the blog post created?
+            if($this->post->save())
+            {
+                // Redirect to the new blog post page
+                return Redirect::to('admin/categories/' . $this->category->id . '/edit')->with('success', Lang::get('admin/categories/messages.create.success'));
+            }
+
+            // Redirect to the blog post create page
+            return Redirect::to('admin/categories/create')->with('error', Lang::get('admin/categories/messages.create.error'));
+        }
+
+        // Form validation failed
+        return Redirect::to('admin/categories/create')->withInput()->withErrors($validator);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param $category
+     * @return Response
+     */
+    public function getShow($category)
+    {
+        // redirect to the frontend
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param $category

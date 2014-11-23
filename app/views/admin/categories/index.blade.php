@@ -5,11 +5,18 @@
 {{{ $title }}} :: @parent
 @stop
 
+@section('keywords')Categories administration @stop
+@section('author')PMK LP3I Makassar Site @stop
+@section('description')Categories administration index @stop
+
 {{-- Content --}}
 @section('content')
 <div class="box box-primary">
 	<div class="box-header">
 		<div class="pull-right box-tools">
+		    <a href="{{url('admin/categories/create')}}" class="btn btn-primary btn-sm iframe">
+        	    <span class="fa fa-plus-circle"></span> Create
+            </a>
 			<a href="#" onClick="oTable.fnReloadAjax()" class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></a>
 		</div>
 		<i class="fa fa-archive"></i>
