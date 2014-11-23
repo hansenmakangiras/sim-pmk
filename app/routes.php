@@ -17,6 +17,7 @@
  */
 Route::model('user', 'User');
 Route::model('comment', 'Comment');
+Route::model('category', 'Category');
 Route::model('post', 'Post');
 Route::model('role', 'Role');
 
@@ -25,6 +26,7 @@ Route::model('role', 'Role');
  *  ------------------------------------------
  */
 Route::pattern('comment', '[0-9]+');
+Route::pattern('category','[0-9]+');
 Route::pattern('post', '[0-9]+');
 Route::pattern('user', '[0-9]+');
 Route::pattern('role', '[0-9]+');
@@ -42,6 +44,14 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth'), function()
     Route::get('comments/{comment}/delete', 'AdminCommentsController@getDelete');
     Route::post('comments/{comment}/delete', 'AdminCommentsController@postDelete');
     Route::controller('comments', 'AdminCommentsController');
+
+    # Category Management
+    Route::get('categories/{category}/show', 'AdminBlogsController@getShow');
+    Route::get('categories/{category}/edit', 'AdminCategoriesController@getEdit');
+    Route::post('categories/{category}/edit', 'AdminCategoriesController@postEdit');
+    Route::get('categories/{category}/delete', 'AdminCategoriesController@getDelete');
+    Route::post('categories/{category}/delete', 'AdminCategoriesController@postDelete');
+    Route::controller('categories', 'AdminCategoriesController');
 
     # Blog Management
     Route::get('blogs/{post}/show', 'AdminBlogsController@getShow');

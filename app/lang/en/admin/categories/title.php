@@ -2,9 +2,9 @@
 
 return array(
 
-    'kategori_management'    => 'Category Management',
-    'kategori_update'        => 'Update a Category',
-    'kategori_delete'        => 'Delete a Category',
-    'create_a_new_kategori'  => 'Create a New Category',
+    'category_management'    => 'Category Management',
+    'category_update'        => 'Update a Category',
+    'category_delete'        => 'Delete a Category',
+    'create_a_new_category'  => 'Create a New Category',
 
 );

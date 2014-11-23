@@ -137,6 +137,7 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider', // Debugger
         'yajra\Oci8\Oci8ServiceProvider', // Oracle DB Driver
         'yajra\Datatables\DatatablesServiceProvider', // Datatables
+        'PhpConsole\Laravel\ServiceProvider',
         //'Barryvdh\Debugbar\ServiceProvider', // Debugger
 
     ),

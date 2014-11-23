@@ -4,23 +4,23 @@ class AdminCategoriesController extends AdminController
 {
 
     /**
-     * Comment Model
-     * @var Comment
+     * Category Model
+     * @var Category
      */
     protected $category;
 
     /**
      * Inject the models.
-     * @param Comment $category
+     * @param Category $category
      */
-    public function __construct(Comment $category)
+    public function __construct(Category $category)
     {
         parent::__construct();
         $this->category = $category;
     }
 
     /**
-     * Show a list of all the comment posts.
+     * Show a list of all the Category posts.
      *
      * @return View
      */
@@ -29,7 +29,7 @@ class AdminCategoriesController extends AdminController
         // Title
         $title = Lang::get('admin/categories/title.category_management');
 
-        // Grab all the comment posts
+        // Grab all the Category posts
         $categories = $this->category;
 
         // Show the page
@@ -126,7 +126,7 @@ class AdminCategoriesController extends AdminController
             $category->delete();
 
             // Was the comment post deleted?
-            $category = Comment::find($id);
+            $category = Category::find($id);
             if(empty($category))
             {
                 // Redirect to the comment posts management page
@@ -144,24 +144,18 @@ class AdminCategoriesController extends AdminController
      */
     public function getData()
     {
-        $categorys = Comment::leftjoin('posts', 'posts.id', '=', 'categories.post_id')
-            ->leftjoin('users', 'users.id', '=','categories.user_id' )
-            ->select(array('categories.id as id', 'posts.id as postid','users.id as userid', 'categories.category', 'posts.title as post_name', 'users.username as poster_name', 'categories.created_at'));
+        $posts = Category::select(array('categories.id', 'categories.category', 'categories.id as Posts', 'categories.created_at'));
 
-        return Datatables::of($categorys)
+        return Datatables::of($posts)
             ->edit_column('created_at', '{{ $created_at->format("Y-m-d h:i:s") }}')
-            ->edit_column('category', '<a href="{{{ URL::to(\'admin/categories/\'. $id .\'/edit\') }}}" class="iframe cboxElement">{{{ Str::limit($content, 40, \'...\') }}}</a>')
-            ->edit_column('post_name', '<a href="{{{ URL::to(\'admin/blogs/\'. $postid .\'/edit\') }}}" class="iframe cboxElement">{{{ Str::limit($post_name, 40, \'...\') }}}</a>')
-            ->edit_column('poster_name', '<a href="{{{ URL::to(\'admin/users/\'. $userid .\'/edit\') }}}" class="iframe cboxElement">{{{ $poster_name }}}</a>')
+            ->edit_column('posts', '{{ DB::table(\'posts\')->where(\'id\', \'=\', $id)->count() }}')
             ->add_column('actions', '
             <div class="btn-group">
-            <a href="{{{ URL::to(\'admin/categories/\' . $id . \'/edit\' ) }}}" class="iframe btn btn-primary btn-xs"><i class="fa fa-pencil"></i> {{{ Lang::get(\'button.edit\') }}}</a>
-            <a href="{{{ URL::to(\'admin/categories/\' . $id . \'/delete\' ) }}}" class="iframe btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> {{{ Lang::get(\'button.delete\') }}}</a>
+                <a href="{{{ URL::to(\'admin/categories/\' . $id . \'/edit\' ) }}}" class="btn btn-primary btn-xs iframe" ><i class="fa fa-pencil"></i> {{{ Lang::get(\'button.edit\') }}}</a>
+                <a href="{{{ URL::to(\'admin/categories/\' . $id . \'/delete\' ) }}}" class="btn btn-xs btn-danger iframe"><i class="fa fa-trash-o"></i> {{{ Lang::get(\'button.delete\') }}}</a>
             </div>
             ')
             ->remove_column('id')
-            ->remove_column('postid')
-            ->remove_column('userid')
             ->remove_column('rn') // rownum for oracle
             ->make();
     }

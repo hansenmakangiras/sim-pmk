@@ -24,6 +24,7 @@
         "xethron/migrations-generator": "dev-master",
         "orangehill/iseed": "dev-master",
         "indatus/trucker": "dev-master",
+        "php-console/laravel-service-provider": "1.*",
         "yajra/laravel-datatables-oracle": "*"
     },
     "require-dev": {
