@@ -135,6 +135,10 @@
                             <a href="{{{ URL::to('admin/blogs') }}}"><span class="fa fa-list-alt"></span> Blog</a>
                         </li>
 
+                        <li{{ (Request::is('admin/categories*') ? ' class="active"' : '') }}>
+                            <a href="{{{ URL::to('admin/categories') }}}"><span class="fa fa-archive"></span> Category</a>
+                        </li>
+
                         <li{{ (Request::is('admin/comments*') ? ' class="active"' : '') }}>
                             <a href="{{{ URL::to('admin/comments') }}}"><span class="fa fa-comments"></span> Comments</a>
                         </li>

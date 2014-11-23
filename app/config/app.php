@@ -137,6 +137,7 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider', // Debugger
         'yajra\Oci8\Oci8ServiceProvider', // Oracle DB Driver
         'yajra\Datatables\DatatablesServiceProvider', // Datatables
+        //'Barryvdh\Debugbar\ServiceProvider', // Debugger
 
     ),
 
@@ -215,6 +216,7 @@ return array(
         'Excel'           => 'Maatwebsite\Excel\Facades\Excel', // Excel
         'PDF'             => 'Barryvdh\DomPDF\Facade', // PDF
         'Breadcrumbs'     => 'DaveJamesMiller\Breadcrumbs\Facade', // Breadcrumbs
+        'Debugbar'        => 'Barryvdh\Debugbar\Facade',
 
     ),
 
