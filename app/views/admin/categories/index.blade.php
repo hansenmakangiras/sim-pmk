@@ -29,7 +29,7 @@
 					<th class="col-md-3">{{{ Lang::get('admin/categories/table.category') }}}</th>
 					<th class="col-md-3">{{{ Lang::get('admin/blogs/table.post_id') }}}</th>
 					<th class="col-md-2">{{{ Lang::get('admin/users/table.username') }}}</th>
-					<th class="col-md-2">{{{ Lang::get('admin/comments/table.created_at') }}}</th>
+					<th class="col-md-2">{{{ Lang::get('admin/categories/table.created_at') }}}</th>
 					<th class="col-md-2">{{{ Lang::get('table.actions') }}}</th>
 				</tr>
 			</thead>

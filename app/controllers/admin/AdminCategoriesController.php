@@ -47,7 +47,7 @@ class AdminCategoriesController extends AdminController
         $title = Lang::get('admin/categories/title.create_a_new_category');
 
         // Show the page
-        return View::make('admin/categories/create_edit', compact('title'));
+        return View::make('admin/categories/create_edit', compact('category'));
     }
 
     /**
@@ -68,21 +68,21 @@ class AdminCategoriesController extends AdminController
         // Check if the form validates with success
         if ($validator->passes())
         {
-            // Create a new blog post
+            // Create a new category post
             $user = Auth::user();
 
             // Update the blog post data
-            $this->post->category          = Input::get('category');
-            $this->post->user_id          = $user->id;
+            $this->category->category          = Input::get('category');
+            $this->category->user_id          = $user->id;
 
-            // Was the blog post created?
+            // Was the category post created?
             if($this->post->save())
             {
-                // Redirect to the new blog post page
+                // Redirect to the new category post page
                 return Redirect::to('admin/categories/' . $this->category->id . '/edit')->with('success', Lang::get('admin/categories/messages.create.success'));
             }
 
-            // Redirect to the blog post create page
+            // Redirect to the category post create page
             return Redirect::to('admin/categories/create')->with('error', Lang::get('admin/categories/messages.create.error'));
         }
 
@@ -141,11 +141,11 @@ class AdminCategoriesController extends AdminController
             // Was the comment post updated?
             if($category->save())
             {
-                // Redirect to the new comment post page
+                // Redirect to the new category post page
                 return Redirect::to('admin/categories/' . $category->id . '/edit')->with('success', Lang::get('admin/categories/messages.update.success'));
             }
 
-            // Redirect to the comments post management page
+            // Redirect to the category post management page
             return Redirect::to('admin/categories/' . $category->id . '/edit')->with('error', Lang::get('admin/categories/messages.update.error'));
         }
 
@@ -209,9 +209,9 @@ class AdminCategoriesController extends AdminController
      */
     public function getData()
     {
-        $posts = Category::select(array('categories.id', 'categories.category', 'categories.id as Posts', 'categories.created_at'));
+        $categories = Category::select(array('categories.id', 'categories.category', 'categories.id as Posts', 'categories.created_at'));
 
-        return Datatables::of($posts)
+        return Datatables::of($categories)
             ->edit_column('created_at', '{{ $created_at->format("Y-m-d h:i:s") }}')
             ->edit_column('posts', '{{ DB::table(\'posts\')->where(\'id\', \'=\', $id)->count() }}')
             ->add_column('actions', '

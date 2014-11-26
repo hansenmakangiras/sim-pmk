@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\URL;
 class Category extends Eloquent {
 
     // define binary/blob fields used for Oracle DB
-    protected $binaries = ['category'];
+    protected $binaries = ['content'];
 
     /**
      * Deletes a blog post and all
@@ -31,11 +31,11 @@ class Category extends Eloquent {
      */
     public function content()
     {
-        return nl2br($this-> category);
+        return nl2br($this-> content);
     }
 
     /**
-     * Get the post's author.
+     * Get the categories author.
      *
      * @return User
      */
@@ -45,13 +45,13 @@ class Category extends Eloquent {
     }
 
     /**
-     * Get the post's comments.
+     * Get the post's categories.
      *
      * @return array
      */
-    public function comments()
+    public function post()
     {
-        return $this->hasMany('Comment');
+        return $this->belongsTo('Post');
     }
 
     /**
@@ -99,6 +99,7 @@ class Category extends Eloquent {
     public function updated_at()
     {
         return $this->date($this->updated_at);
+
     }
 
 }

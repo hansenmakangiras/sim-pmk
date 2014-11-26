@@ -5,7 +5,7 @@
 <!-- Tabs -->
 <ul class="nav nav-tabs">
 	<li class="active"><a href="#tab-general" data-toggle="tab">General</a></li>
-	<li><a href="#tab-meta-data" data-toggle="tab">Meta data</a></li>
+	{{--<li><a href="#tab-meta-data" data-toggle="tab">Meta data</a></li>--}}
 </ul>
 <!-- ./ tabs -->
 
@@ -19,25 +19,25 @@
 	<div class="tab-content">
 		<!-- General tab -->
 		<div class="tab-pane active" id="tab-general">
-			{{--<!-- Post Title -->
+			<!-- Post Title -->
 			<div class="form-group {{ $errors->has('category') ? 'has-error' : '' }}">
 				<div class="col-md-12">
-					<label class="control-label" for="title">Category Name</label>
-					<input class="form-control" type="text" name="title" id="title" value="{{ Input::old('category', isset($category) ? $category->category : null) }}" />
+					<label class="control-label" for="category">Category Name</label>
+					<input class="form-control" type="text" name="category" id="category" value="{{ Input::old('category', isset($category) ? $category->category : null) }}" />
 					{{ $errors->first('category', '<span class="help-block">:message</span>') }}
 				</div>
 			</div>
-			<!-- ./ post title -->--}}
+			<!-- ./ post title -->
 
-			<!-- Content -->
+			{{--<!-- Content -->
 			<div class="form-group {{ $errors->has('category') ? 'has-error' : '' }}">
 				<div class="col-md-12">
 					<label class="control-label" for="content">Category</label>
-					<textarea class="form-control full-width wysihtml5" name="content" value="content" rows="10">{{ Input::old('category', isset($category) ? $category->category : null) }}</textarea>
+					<textarea class="form-control full-width wysihtml5" name="category" value="content" rows="10">{{ Input::old('category', isset($category) ? $category->category : null) }}</textarea>
 					{{ $errors->first('category', '<span class="help-block">:message</span>') }}
 				</div>
 			</div>
-			<!-- ./ content -->
+			<!-- ./ content -->--}}
 		</div>
 		<!-- ./ general tab -->
 
