@@ -69,7 +69,7 @@
 		<link rel="shortcut icon" href="{{{ asset('assets/ico/favicon.png') }}}">
 	</head>
 
-	<body style="background-color: #f1f2f6;">
+	<body style="background-color: #0000;">
 		<!-- To make sticky footer need to wrap in a div -->
 		<div id="wrap">
 			<!-- Navbar -->
