@@ -16,7 +16,7 @@ class Category extends Eloquent {
      */
     public function delete()
     {
-        // Delete the comments
+        // Delete the categories
         $this->categories()->delete();
 
         // Delete the blog post
@@ -51,7 +51,7 @@ class Category extends Eloquent {
      */
     public function post()
     {
-        return $this->belongsTo('Post');
+        return $this->hasmany('Post');
     }
 
     /**

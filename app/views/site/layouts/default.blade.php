@@ -29,7 +29,7 @@
 		<!-- CSS
 		================================================== -->
 		<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-		<!-- <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-theme.min.css')}}"> -->
+		{{--<link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap-theme.min.css')}}">--}}
 		<link rel="stylesheet" href="{{asset('bootflat/css/bootflat.min.css')}}">
 
 		<style>
@@ -87,6 +87,8 @@
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav">
 							<li {{ (Request::is('/') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Home</a></li>
+							<li {{ (Request::is('/blog') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Blog</a></li>
+							<li {{ (Request::is('/events') ? ' class="active"' : '') }}><a href="{{{ URL::to('') }}}">Events</a></li>
 						</ul>
 
 						<ul class="nav navbar-nav pull-right">
@@ -149,9 +151,9 @@
 			</div>
 		<!-- Javascripts
 		================================================== -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		{{--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>--}}
+		<script src="{{asset('assets/js/jquery-1.11.1.min.js')}}"></script>
 		<script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-
 		@yield('scripts')
 	</body>
 </html>
